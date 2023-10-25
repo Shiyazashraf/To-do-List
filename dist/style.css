@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One:ital@1&family=Anton&family=Black+Han+Sans&family=Cherry+Bomb+One&family=Lobster&family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One:ital@1&family=Anton&family=Black+Han+Sans&family=Cherry+Bomb+One&family=Lobster&family=Permanent+Marker&family=Rubik+Dirt&display=swap');
+
+:root {
+    --skyBlue:#8ecae6;
+    --blue: #219ebc;
+    --darkBlue: #023047;
+    --yellow: #ffb703;
+    --orange: rgb(251, 133, 0);
+}
+
+*, *::after,*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:url(./assets/wallpaperflare.com_wallpaper\ \(7\).jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ /* main content container */
+.content {
+    height: 100vh;
+    width: 100;
+    display: flex;
+    flex-direction: column;
+}
+/* inside the content container */
+.header {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 4rem;
+    font-family:'Permanent Marker',sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--darkBlue);
+    text-shadow: 2px 2px 2px var(--yellow);
+}
+
+.main {
+    flex: 2;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    backdrop-filter: blur(5px);
+}
+/* inside the main container */
+.main .project-container,
+.main .list-container {
+    flex: 1;
+    border: 2px solid var(--orange);
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(2, 48, 71,0.7);
+    border-radius: 20px;
+    align-items: center;
+    padding: 1rem;
+    color: var(--yellow);
+    box-shadow: 2px 2px 10px 2px black;
+    
+}
+
+.main .project-container {
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* inside the project container */
+.project-container h3{
+    font-size: 3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.project-container #add-project-button{
+    width: 100%;
+    justify-self: end;
+}
+.project-container .projects-List {
+    height: 100%;
+    width: 100%;
+    list-style-type: none;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.projects-List .project-item {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-radius:10px;
+    background: none;
+    justify-content: space-between;
+    cursor: pointer;
+    border-bottom: 1px solid var(--orange);
+    color: var(--yellow);
+    transition: background 0.3s;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.project-item .project-delete-button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+.project-delete-button:hover {
+    animation: shake 0.5s;
+}
+
+.project-item:hover  {
+    background-color: rgba(251, 133, 0,0.9);
+    color: var(--darkBlue);
+}
+.project-item:hover .project-delete-button{
+    color: var(--darkBlue);
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+#add-project-button {
+    font-size: 30px;
+    font-weight: 800;
+    border-radius: 10px;
+    background-color: var(--yellow);
+    color: var(--darkBlue);
+    border: 2px solid var(--yellow);
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+#add-project-button:hover {
+    color: var(--yellow);
+    background-color: transparent;
+}
+#add-project-button:active {
+    border-color: var(--skyBlue);
+}
+
+
+/* inside the list container */
+.main .list-container {
+    flex: 2;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+.list-container h3 {
+    font-size: 2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* list item container */
+.list-container .list-items-container {
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.list-items-container .list-items {
+    /* border: 2px solid red; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.list-items .list-item {
+    background-color: var(--yellow);
+    border-radius: 5px;
+    color: var(--darkBlue);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease-in ;
+    align-items: center;
+}
+.list-item:hover {
+    background-color: var(--darkBlue);
+    color: var(--yellow);
+}
+
+.list-item:hover .item-button-container > button {
+    color: var(--yellow);
+} 
+
+.list-item .item-button-container {
+    padding: 2px 10px;
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+}
+
+.item-button-container > button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    transition: border 0.1s ease-in;
+}
+.item-button-container > button:hover {
+    border: 3px solid var(--yellow);
+    cursor: pointer;
+}
+
+.details-active {
+    flex-basis: 200px;
+}
+
+/* list button containers */
+.list-container .buttons-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.buttons-container > button {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: var(--yellow);
+    color: var(--darkBlue);
+    border: 2px solid var(--yellow);
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.buttons-container > button:hover {
+    color: var(--yellow);
+    background-color: transparent;
+}
+.buttons-container > button:active {
+    border-color: var(--skyBlue);
+}
+
+
+
+
+
