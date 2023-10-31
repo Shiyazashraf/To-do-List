@@ -17,49 +17,61 @@
             <div class="project-container">
                 <h3>Projects</h3>
                 <ul class="projects-List">
-                    <li class="project">
-                        <div class="project-item">
-                            <div class="project-name">Project - default</div>
-                            <button class="project-delete-button" id="project-delete-button"><i class='bx bxs-trash'></i></button>
-                        </div>
+                    <li class="project active-project">
+                       Songs
+                       <span><button class="project-delete-button"><i class='bx bxs-trash'></i></button></span>
                     </li>
                     <li class="project">
-                        <div class="project-item">
-                            <div class="project-name">Project- 2 - default</div>
-                            <button class="project-delete-button" id="project-delete-button"><i class='bx bxs-trash'></i></button>
-                        </div>
-                    </li>
+                        Drawings
+                        <span><button class="project-delete-button"><i class='bx bxs-trash'></i></button></span>
+                     </li>
                 </ul>
-                <button id="add-project-button">+</button>
+                <form action="">
+                    <input type="text"
+                    class="new makeproject"
+                    placeholder="New project name"
+                    >
+                    <button class="btn project">+</button>
+                </form>
             </div>
             
             <div class="list-container">
-                <h3>Items-Check-List</h3>
-                <div class="list-items-container">
-                    <ul class="list-items">
-                        <li class="list-item" >
-                            <div class="item-name">item-1</div>
-                            <div class="item-button-container">
-                                <button id="item-details-button">!</button>
-                                <button id="delete-item-button">X</button>
-                                <button id="completed-button"><i class='bx bx-check'></i></button>
-                            </div>  
-                        </li>
-                        <li class="list-item ">
-                            <div class="item-name">item-2</div>
-                            <div class="item-button-container">
-                                <button id="item-details-button">!</button>
-                                <button id="delete-item-button">X</button>
-                                <button id="completed-button"><i class='bx bx-check'></i></button>
-                            </div>  
-                        </li>
-                    </ul>
+                    <div id="list-header">Songs</div>
+                <div class="list-body-container">
+                    <div class="list-items">
+                        <div class="item">
+                            <input type="checkbox" id="item1">
+                            <label for="item1">
+                                <span class="custom-checkbox"></span>
+                                Ed Sheeran - perfect
+                                <span><button class="item-delete-button">X</button></span>
+                            </label>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" id="item2">
+                            <label for="item2">
+                                <span class="custom-checkbox"></span>
+                                Taylor Swift - Lover
+                                <span><button class="item-delete-button">X</button></span>
+                            </label>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" id="item3">
+                            <label for="item3">
+                                <span class="custom-checkbox"></span>
+                                Adele - Easy on me
+                                <span><button class="item-delete-button">X</button></span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
-                <div class="buttons-container">
-                    <button id="add-item-button">Add Item</button>
-                    <button id="remove-all-button">Remove All</button>
-                </div>
-                
+                <form action="">
+                    <input type="text"
+                    class="new makeItem"
+                    placeholder="New item name"
+                    >
+                    <button class="btn">+</button>
+                </form>
             </div>
         </div>
         <div class="footer">
