@@ -16,19 +16,20 @@
         <div class="main">
             <div class="project-container">
                 <h3>Projects</h3>
-                <ul class="projects-List">
-                    <li class="project active-project">
+                <ul class="projects-List" data-projects>
+                     <!-- <li data-projectid="123" class="project">
                        Songs
-                       <span><button class="project-delete-button"><i class='bx bxs-trash'></i></button></span>
-                    </li>
-                    <li class="project">
+                       <button data-projectid="123" class="project-delete-button"><i class='bx bxs-trash'></i></button>
+                    </li> -->
+                    <!-- <li class="project">
                         Drawings
-                        <span><button class="project-delete-button"><i class='bx bxs-trash'></i></button></span>
-                     </li>
+                        <button class="project-delete-button"><i class='bx bxs-trash'></i></button>
+                     </li> -->
                 </ul>
-                <form action="">
+                <form action="" data-new-project-form>
                     <input type="text"
                     class="new makeproject"
+                    data-new-project-input
                     placeholder="New project name"
                     >
                     <button class="btn project">+</button>
@@ -36,7 +37,10 @@
             </div>
             
             <div class="list-container">
-                    <div id="list-header">Songs</div>
+                    <div class="list-header-container">
+                        <div id="list-header">Songs</div>
+                        <div class="item-remaining">n items remaining</div>
+                    </div>
                 <div class="list-body-container">
                     <div class="list-items">
                         <div class="item">
@@ -44,7 +48,7 @@
                             <label for="item1">
                                 <span class="custom-checkbox"></span>
                                 Ed Sheeran - perfect
-                                <span><button class="item-delete-button">X</button></span>
+                                <button class="item-delete-button">X</button>
                             </label>
                         </div>
                         <div class="item">
@@ -52,7 +56,7 @@
                             <label for="item2">
                                 <span class="custom-checkbox"></span>
                                 Taylor Swift - Lover
-                                <span><button class="item-delete-button">X</button></span>
+                                <button class="item-delete-button">X</button>
                             </label>
                         </div>
                         <div class="item">
@@ -60,7 +64,7 @@
                             <label for="item3">
                                 <span class="custom-checkbox"></span>
                                 Adele - Easy on me
-                                <span><button class="item-delete-button">X</button></span>
+                                <button class="item-delete-button">X</button>
                             </label>
                         </div>
                     </div>
@@ -72,6 +76,11 @@
                     >
                     <button class="btn">+</button>
                 </form>
+                <div class="buttons-container">
+                    <button id="clear-tasks">Clear completed tasks</button>
+                    <button id="delete-project">Delete project</button>
+                </div>
+                
             </div>
         </div>
         <div class="footer">

@@ -180,7 +180,12 @@ form {
     display: flex;
     justify-content: space-between;
 }
-
+.list-header-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
 #list-header {
     font-size: 3rem;
     font-weight: 900;
@@ -300,6 +305,24 @@ form {
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     opacity: 0.6;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.buttons-container button {
+    font-size: 20px;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid var(--yellow);
+    color: var(--yellow);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.buttons-container button:hover {
+    opacity: 0.7;
 }
 
 
