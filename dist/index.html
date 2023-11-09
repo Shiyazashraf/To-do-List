@@ -16,16 +16,7 @@
         <div class="main">
             <div class="project-container">
                 <h3>Projects</h3>
-                <ul class="projects-List" data-projects>
-                     <!-- <li data-projectid="123" class="project">
-                       Songs
-                       <button data-projectid="123" class="project-delete-button"><i class='bx bxs-trash'></i></button>
-                    </li> -->
-                    <!-- <li class="project">
-                        Drawings
-                        <button class="project-delete-button"><i class='bx bxs-trash'></i></button>
-                     </li> -->
-                </ul>
+                <ul class="projects-List" data-projects></ul>
                 <form action="" data-new-project-form>
                     <input type="text"
                     class="new makeproject"
@@ -36,49 +27,25 @@
                 </form>
             </div>
             
-            <div class="list-container">
+            <div class="list-container" data-item-display-container>
                     <div class="list-header-container">
-                        <div id="list-header">Songs</div>
-                        <div class="item-remaining">n items remaining</div>
+                        <div id="list-header" data-item-title></div>
+                        <div class="item-remaining" data-item-count></div>
                     </div>
                 <div class="list-body-container">
-                    <div class="list-items">
-                        <div class="item">
-                            <input type="checkbox" id="item1">
-                            <label for="item1">
-                                <span class="custom-checkbox"></span>
-                                Ed Sheeran - perfect
-                                <button class="item-delete-button">X</button>
-                            </label>
-                        </div>
-                        <div class="item">
-                            <input type="checkbox" id="item2">
-                            <label for="item2">
-                                <span class="custom-checkbox"></span>
-                                Taylor Swift - Lover
-                                <button class="item-delete-button">X</button>
-                            </label>
-                        </div>
-                        <div class="item">
-                            <input type="checkbox" id="item3">
-                            <label for="item3">
-                                <span class="custom-checkbox"></span>
-                                Adele - Easy on me
-                                <button class="item-delete-button">X</button>
-                            </label>
-                        </div>
-                    </div>
+                    <div class="list-items" data-items></div>
                 </div>
-                <form action="">
+                <form action="" data-new-item-form>
                     <input type="text"
                     class="new makeItem"
                     placeholder="New item name"
+                    data-new-item-input
                     >
                     <button class="btn">+</button>
                 </form>
                 <div class="buttons-container">
-                    <button id="clear-tasks">Clear completed tasks</button>
-                    <button id="delete-project">Delete project</button>
+                    <button id="clear-tasks" data-clear-completed-items>Clear completed tasks</button>
+                    <button id="delete-project" data-delete-project-button>Delete project</button>
                 </div>
                 
             </div>
@@ -87,6 +54,13 @@
             <p>Done by : Shiyaz Ashraf</p>
         </div>
     </div>
-    
+    <template id="item-template">
+        <div class="item">
+            <input type="checkbox">
+            <label>
+                <span class="custom-checkbox"></span>
+            </label>
+        </div>
+    </template>
 </body>
 </html>
